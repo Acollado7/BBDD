@@ -41,16 +41,24 @@ constraint fk_productos_categorias foreign key(categoria_id) references categori
 
                       on    delete cascade
 );
-
 insert into proveedores(nombre, direccion, telefono) values('Miguel', 'Calle Carril de la Fuente 60', '717024054');
 insert into proveedores(nombre, direccion, telefono) values('Maria', 'Calle Aduana 61', ' 660528691');
 insert into proveedores(nombre, direccion, telefono) values('Pablo', ' Av. Zumalakarregi 47', '714499439');
 
-insert into categorias(nombre) values('categoria1');
-insert into categorias(nombre) values('categoria2');
-insert into categorias(nombre) values('categoria3');
+insert into categorias(nombre) values('Informatica');
+insert into categorias(nombre) values('Deportes');
+insert into categorias(nombre) values('Hogar');
 
-insert into productos(nombre, precio, descripcion, categoria_id, proveedor_id) values('producto1', 100, 'descripcion1', 1, 1);
-insert into productos(nombre, precio, descripcion, categoria_id, proveedor_id) values('producto2', 200, 'descripcion2', 2, 2);
-insert into productos(nombre, precio, descripcion, categoria_id, proveedor_id) values('producto3', 300, 'descripcion3', 3, 3);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Portatil', 500, 'Portatil de 15 pulgadas', 1, 1);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Raton', 10, 'Raton inalambrico', 2, 1);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Teclado', 20, 'Teclado inalambrico', 3, 1);
+
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Balon', 20, 'Balon de futbol', 1, 2);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Raqueta', 30, 'Raqueta de tenis', 2, 2);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Palas', 40, 'Palas de padel', 3, 2);
+
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Sofa', 500, 'Sofa de 3 plazas', 1, 3);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Mesa', 100, 'Mesa de comedor', 2, 3);
+insert into productos(nombre, precio, descripcion, proveedor_id, categoria_id) values('Silla', 50, 'Silla de comedor', 3, 3);
+
 
